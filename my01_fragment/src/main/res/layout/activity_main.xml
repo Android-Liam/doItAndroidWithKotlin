@@ -13,10 +13,8 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNaviView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -25,10 +23,9 @@
         android:layout_height="75dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"
-        />
+    />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

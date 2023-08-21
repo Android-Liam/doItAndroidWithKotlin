@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/ch7_layout" />
             <option value="$PROJECT_DIR$/ch8_event" />
             <option value="$PROJECT_DIR$/my01_fragment" />
+            <option value="$PROJECT_DIR$/my02_recyclerview" />
           </set>
         </option>
       </GradleProjectSettings>

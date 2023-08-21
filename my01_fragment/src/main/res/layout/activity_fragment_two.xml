@@ -9,7 +9,7 @@
 
     <TextView
         android:text="Second Fragment"
-        android:textSize="50sp"
+        android:textSize="40sp"
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

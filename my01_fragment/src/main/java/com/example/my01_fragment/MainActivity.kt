@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val firstFragment = FragmentOne()
         val secondFragment = FragmentTwo()
         val thirdFragment = FragmentThree()
+        val fourthFragment = FragmentFour()
 
         setCurrentFragment(firstFragment)
 
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.first -> setCurrentFragment(firstFragment)
                 R.id.second -> setCurrentFragment(secondFragment)
                 R.id.third -> setCurrentFragment(thirdFragment)
+                R.id.fourth -> setCurrentFragment(fourthFragment)
             }
             true
         }

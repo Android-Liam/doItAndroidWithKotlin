@@ -2,6 +2,7 @@ package com.example.my02_recyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val rv_board = findViewById<RecyclerView>(R.id.rv_board)
+        val rv_board = findViewById<RecyclerView>(R.id.recyclerView)
 
         val itemList = ArrayList<Item>()
 
@@ -23,11 +24,12 @@ class MainActivity : AppCompatActivity() {
             itemList.add(Item("0$i:00", i.toString().repeat(10),"Liam"))
         }
 
+        // Adapter
         val Adapter = Adapter(itemList)
         Adapter.notifyDataSetChanged()
 
         rv_board.adapter = Adapter
-        rv_board.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        rv_board.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
     }
 }
 
@@ -37,7 +39,7 @@ class Adapter(val itemList: ArrayList<Item>) :
     RecyclerView.Adapter<Adapter.ViewHorder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHorder { // View Create
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_recycler_view, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_main, parent, false)
         return ViewHorder(view)
     }
 
@@ -45,6 +47,10 @@ class Adapter(val itemList: ArrayList<Item>) :
         holder.tv_time.text = itemList[position].time
         holder.tv_title.text = itemList[position].title
         holder.tv_name.text = itemList[position].name
+
+        holder.tv_title.setOnClickListener {
+            Log.d("Log", "Click!")
+        }
     }
 
     override fun getItemCount(): Int { // return Item Count
